@@ -88,17 +88,18 @@ contract Fundraiser is Ownable {
 
         return (values, dates);
     }
-    /*
+    
 
    function withdraw() public onlyOwner {
         uint256 balance = address(this).balance;
-	beneficiary.transfer(balance);
-	emit Withdraw(balance);
+	    beneficiary.transfer(balance);
+	    emit Withdraw(balance);
    }
+   
 
    fallback () external payable {
        totalDonations = totalDonations.add(msg.value);
        donationsCount++;
    }
-   */
+   
 }

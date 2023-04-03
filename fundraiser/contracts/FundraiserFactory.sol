@@ -45,15 +45,15 @@ contract FundraiserFactory {
 
          require(offset <= fundraisersCount(), "offset out of bounds");
 	 
-         uint256 size = fundraisersCount() - offset;
-	 size = size < limit ? size: limit;
-	 size = size < maxLimit ? size: maxLimit;
-	 coll = new Fundraiser[](size);
-         for(uint256 i = 0; i < size; i++){
-	    coll[i] = _fundraisers[offset+i];
-	 }
+        uint256 size = fundraisersCount() - offset;
+	    size = size < limit ? size: limit;
+	    size = size < maxLimit ? size: maxLimit;
+	    coll = new Fundraiser[](size);
+        for(uint256 i = 0; i < size; i++){
+	        coll[i] = _fundraisers[offset+i];
+	    }
 	 
-         return coll;
+        return coll;
 
        }
    

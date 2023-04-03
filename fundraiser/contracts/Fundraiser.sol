@@ -1,11 +1,11 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 import "openzeppelin-solidity/contracts/access/Ownable.sol";
-//import "openzeppelin-solidity/contracts/utils/math/SafeMath.sol";
+import "openzeppelin-solidity/contracts/math/SafeMath.sol";
 
 contract Fundraiser is Ownable {
 
-    //using SafeMath for uint256;
+    using SafeMath for uint256;
 
     uint256 public totalDonations;
     uint256 public donationsCount;
@@ -63,10 +63,10 @@ contract Fundraiser is Ownable {
 	        date: block.timestamp
 	     });
 	     _donations[msg.sender].push(donation);
-	     //totalDonations = totalDonations.add(msg.value);
-	     //donationsCount++;
+	     totalDonations = totalDonations.add(msg.value);
+	     donationsCount++;
 
-	     //emit DonationReceived(msg.sender, msg.value);
+	     emit DonationReceived(msg.sender, msg.value);
     }
      
 

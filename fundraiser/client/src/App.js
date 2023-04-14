@@ -34,6 +34,8 @@ const App = () => {
           deployedNetwork && deployedNetwork.address,
         );
 
+        instance.options.address = "0x6eAC288D3De96687feba62317d51443ae623B1df";
+
         // Set web3, accounts, and contract to the state, and then proceed with an
         setState({web3, accounts, contract: instance});
 
